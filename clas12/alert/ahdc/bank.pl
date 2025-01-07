@@ -57,10 +57,10 @@ sub define_ahdc_bank
 	#insert_bank_variable(\%configuration, $bankname, "TDC_ped" ,     6, "Di", "pedestal from pulse analysis - currently set to doca");
 	insert_bank_variable(\%configuration, $bankname, "hitn",        99, "Di", "hit number");
 	
-	insert_bank_variable(\%configuration, $bankname, "wf136_order",     4, "Di", "set to 1");
-        insert_bank_variable(\%configuration, $bankname, "wf136_timestamp", 5, "Di", "timestamp from DREAM - currently set to 0");
+	insert_bank_variable(\%configuration, $bankname, "WF136_order",     4, "Di", "set to 1");
+        insert_bank_variable(\%configuration, $bankname, "WF136_timestamp", 5, "Di", "timestamp from DREAM - currently set to 0");
 	for my $itr (1..136) {
-		my $entry = "wf136_s$itr";
+		my $entry = "WF136_s$itr";
 		insert_bank_variable(\%configuration, $bankname, $entry,$itr+5, "Di", "ADC sample $itr");
 	}
 
