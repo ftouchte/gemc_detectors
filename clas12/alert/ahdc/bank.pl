@@ -46,9 +46,9 @@ sub define_ahdc_bank
 	insert_bank_variable(\%configuration, $bankname, "ADC_ped" ,     7, "Di", "pedestal from pulse analysis - currently set to noise level");
 	insert_bank_variable(\%configuration, $bankname, "ADC_integral" ,8, "Di", "integral");
 	insert_bank_variable(\%configuration, $bankname, "ADC_timestamp",9, "Di", "timestamp from DREAM - currently set to 0");
-        insert_bank_variable(\%configuration, $bankname, "ADC_timeRiseCFA",  10, "Dd", "moment when the signal reaches a Constant Fraction of its Amplitude uphill");
-	insert_bank_variable(\%configuration, $bankname, "ADC_timeCFD",    11, "Dd", "time extracted using the Constant Fraction Discriminator (CFD) algorithm");
-	insert_bank_variable(\%configuration, $bankname, "ADC_timeOVR",    12, "Dd", "time over threshold - the same threshold used to define timeRiseCFA");
+        insert_bank_variable(\%configuration, $bankname, "ADC_leadingEdgeTime",  10, "Dd", "moment when the signal reaches a Constant Fraction of its Amplitude uphill");
+	insert_bank_variable(\%configuration, $bankname, "ADC_constantFractionTime",    11, "Dd", "time extracted using the Constant Fraction Discriminator (CFD) algorithm");
+	insert_bank_variable(\%configuration, $bankname, "ADC_timeOverThreshold",    12, "Dd", "time over threshold - the same threshold used to define leadingEdgeTime");
 	insert_bank_variable(\%configuration, $bankname, "ADC_mctime",   13, "Dd", "mc time - time deducted from doca calculation and weighted average with Edep");
 	insert_bank_variable(\%configuration, $bankname, "ADC_mcEtot",   14, "Dd", "mc Etot - sum of all Edep");
 	insert_bank_variable(\%configuration, $bankname, "ADC_nsteps",   15, "Di", "nsteps");
